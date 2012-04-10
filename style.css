@@ -1,0 +1,792 @@
+/*
+Theme Name: Steele
+Description: Just a simple blogging theme
+Author: Jarret Cade
+Author URI: http://810media.com
+Version: 1.0
+License: GNU General Public License v2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+    margin-top: 10px;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* End Meyer CSS Reset */
+
+/***** General Styling *****/
+
+body {
+    background: url('images/tactile_noise.png');
+    font: normal 16px Helvetica;
+}
+
+A {
+    color: #333;
+}
+
+A:hover {
+    text-decoration: none;
+}
+
+.clear {
+    clear: both;
+}
+
+#page {
+    width: 1004px;
+    margin: 10px auto 10px auto;
+    background: #FFF;
+    padding: 10px;
+}
+
+#wrapper {
+    margin-bottom: 10px;
+    border: 1px solid #dddddd;
+    background: #f8f8f8 url('images/wrapper-bg.png');
+    margin-top: 10px;
+    border-radius: 2px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+        margin: 10px auto 10px 0px;
+        text-decoration: underline;
+        font-weight: bold;
+    }
+    
+h1 {
+    font-size: 26px;
+}       
+        
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+h5 {
+    font-size: 18px;
+}
+
+h6 {
+    font-size: 16px;
+}
+        
+blockquote {
+	margin-left: 10px;
+    padding: 1px 10px 1px 10px;
+	border-left: solid 5px #DDD;
+}
+
+    blockquote em, blockquote i, blockquote cite {
+        font-style: italic;
+    }
+
+strong {
+    font-weight: bold;
+}
+
+cite, em, i {
+    font-style: italic;
+}
+
+pre {
+    font: 14px Courier, monospace;
+    line-height: 1.4em;
+    overflow: auto;
+    padding: 1em;
+}
+
+abbr, acronym, dfn {
+    cursor: help;
+    border-bottom: dashed 1px #CCC;
+}
+
+ins {
+    background-color: #FFFCDB;
+}
+
+sup, sub {
+    font-size: 12px;
+    height: 0px;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    bottom: .2em;
+}
+
+sub {
+    top: .2em;
+}
+
+table {
+    width: 100%;
+    margin: 20px auto 20px auto;
+}
+
+dl {
+    margin-left: 5px;
+}
+
+    dl dt {
+        font-weight: bold;
+        margin-bottom: 1px;
+    }
+    
+    dl dd {
+        margin-left: 7px;
+        margin-bottom: 3px;
+    }
+    
+ul, ol {
+    margin-left: 30px;
+}
+    
+    ul ul, ol ol {
+        margin-left: 7px;
+    }
+
+    ul ul ul, ol ol ol {
+        margin-left: 7px;
+    }
+    
+    ul li, ol li {
+        padding: 2px;
+    }
+
+    ul li {
+        list-style-type: square;
+    }
+    
+    ol li {
+        list-style-type: upper-alpha;
+    }
+    
+address {
+    margin: 10px;
+    display: block;
+    font-style: italic;
+}
+
+big {
+    font-size: 1.2em;
+}
+
+code, kbd, tt, var {
+    font: 12px Courier, monospace;
+}
+
+s {
+    text-decoration: line-through;
+}
+
+embed {
+    max-width: 515px;
+}
+
+.gallery-item {
+    margin: 0px;
+    padding: 0px;
+}
+
+/***** Header Styling *****/
+
+#header .sitename {
+    font-size: 2em;
+    margin-top: 7px;
+}
+
+    #header .sitename a {
+        text-decoration: none;
+    }
+
+#header #header-search {
+    float: right;
+    margin: 10px 5px auto;
+}
+    #header-search #s {
+        height: 22px;
+        width: 237px;
+    }
+
+    #header-search #searchsubmit {
+        border: solid 1px #aaa;
+        height: 28px;
+        margin-left: -5px;
+        margin-right: -5px;
+        background: #ededed;
+        width: 60px;
+    }
+
+/***** End Header Styling *****/
+
+/***** Content Styling *****/
+
+#content {
+    float: right;
+    clear: both;
+    width: 702px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    color: #222;
+    background: #f8f8f8;
+}
+
+    #content .padding {
+        margin: 10px 20px 10px 20px;
+    }
+    
+    .error404 #content #searchform {
+        margin-left: 20px;
+    }
+
+#content .archive-title {
+    font-size: 18px;
+    font-style: italic;
+    margin: 0px 10px 10px 10px;
+    text-align: center;
+}
+
+#content .post-wrapper {
+    clear: both;
+    margin-bottom: 20px;
+    margin-right: 0px;
+    padding: 5px 0px 0px 0px;
+    border: solid 1px #eee;
+    background-color: #fefefe;
+}
+
+    #content .sticky {
+        border-top: solid 1px #bbb;
+        border-bottom: solid 1px #bbb;
+    }
+
+#content .pre-meta {
+    float: left;
+    width: 130px;
+    font-size: 12px;
+    margin-top: -5px;
+    padding: 5px 0px 5px 5px;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    background-color: #fafafa;
+    border-bottom-right-radius: 6px;
+    box-shadow: 1px 1px 2px #f1f1f1;
+}
+
+    .pre-meta p {
+        line-height: 1.4em;
+        font-size: 11px;
+    }
+    
+    .pre-meta .post-link {
+        margin-top: 5px;
+    }
+    
+#content .post-content {
+    float: right;
+    width: 515px;
+    margin-right: 40px;
+}
+
+    .post-content h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .post-content h2.post-title:hover {
+        text-decoration: none;
+    }
+    
+        .single .post-content h1 {
+            margin-bottom: 20px;
+            text-decoration: none;
+        }
+
+    .post-content p {
+        margin: 1em auto 1em 5px;
+        line-height: 1.6em;
+		clear: both;
+    }
+    
+    .post-content img {
+        max-width: 515px;
+        height: auto;
+    }
+    
+        .post-content img.size-full {
+            max-width: 100%;
+            width: auto;
+        }
+    
+    .post-content .aligncenter {
+        text-align: center;
+        margin: 5px auto 5px auto;
+        display: block;
+    }
+
+    .post-content .alignleft {
+        float: left;
+        margin: 10px;
+    }
+
+    .post-content .alignright {
+        float: right;
+        margin: 10px;
+    }
+
+    .post-content .wp-caption {
+        padding: 6px 3px;
+        border: solid 1px #bbb;
+        background: #f1f1f1;
+        margin-bottom: 10px;
+        text-align: center;
+        max-width: 515px;
+    }
+    
+    .post-content .wp-caption img {
+        height: auto;
+    }
+
+    .post-content .wp-caption-text {
+        margin: 0px;
+        font-size: 14px;
+    }
+    
+    .post-content .gallery-caption {
+        background-color: #eee;
+        padding: 1px;
+    }
+    
+#content .post-meta {
+    clear: both;
+    padding-top: 15px;
+}
+
+    #content .post-meta #taglist {
+        float: left;
+        width: 290px;
+        margin-left: 10px;
+        padding-bottom: 10px;
+        border-bottom: solid 1px #eee;
+    }
+
+    #content .post-meta #categorylist {
+        float: right;
+        width: 290px;
+        margin-right: 10px;
+        padding-bottom: 10px;
+        border-bottom: solid 1px #eee;
+    }
+
+#content #postnav, #content .postnav {
+    text-align: center;
+    margin-bottom: 5px;
+    padding: 25px 5px 5px 5px;
+    clear: both;
+}
+
+    #content .postnav {
+        padding-top: 10px;
+    }
+
+    #content #postnav .alignleft {
+        float: left;
+        width: 350px;
+        text-align: left;
+    }
+
+    #content #postnav .alignright {
+        float: right;
+        width: 350px;
+        text-align: right;
+        margin-top: -20px;
+    }
+
+/***** End Content Styling *****/
+
+/***** Comment Styling (kill me now) *****/
+
+#comments-wrapper {
+    width: 515px;
+    float: right;
+    margin-right: 40px;
+}
+
+    #comments-wrapper .commentlist {
+        width: 515px;
+        margin-left: 0px;
+    }
+
+    #comments-wrapper ol li {
+        list-style-type: none;
+        clear: both;
+    }
+
+    #comments-wrapper .comment-paging {
+        background-color: #555;
+        margin: 10px auto 0px auto;
+        height: 23px;
+    }
+
+    #comments-wrapper .bottom {
+        margin: -10px auto;
+    }
+
+        .comment-paging .older-comments {
+            float: left;
+            padding: 2px 5px 2px 5px;
+        }
+
+        .comment-paging .newer-comments {
+            float: right;
+            padding: 2px 5px 2px 5px;
+        }
+
+        .comment-paging a {
+            color: #FFF;
+        }
+
+    .commentlist h6 {
+        clear: both;
+        padding-top: 10px;
+        text-decoration: none;
+    }
+    
+    .commentlist #comments-status {
+        margin-bottom: 10px;
+    }
+
+    .commentlist li.comment {
+        border: solid 1px #CCC;
+		background-color: #fefefe;
+    }
+
+    .commentlist li.bypostauthor {
+            border: solid 1px #bbb;
+            background-color: #fff;
+        }
+
+    .comment {
+        margin-bottom: 10px;
+        padding: 7px;
+    }
+
+    .comment div p {
+        margin-top: -3px;
+    }
+
+        .comment div blockquote {
+            margin-bottom: 10px;
+        }
+    
+    .comment .comment-author {
+        float: right;
+        width: 110px;
+        margin: -14px -14px 10px 10px;
+        text-align: center;
+        font-size: 14px;
+        border-left: 1px solid #e2e2e2;
+        border-bottom: 1px solid #e2e2e2;
+        border-bottom-left-radius: 5px;
+        background-color: #f4f4f4;
+    }
+
+        .comment .comment-author p {
+            margin-top: 10px;
+            margin-bottom: 2px;
+            font-size: 10px;
+        }
+
+        .comment .comment-author .avatar {
+            margin-top: 2px;
+            margin-bottom: -10px;
+        }
+        
+        .comment .comment-author .comment-edit-link {
+            font-size: 12px;
+            margin-bottom: 2px;
+        }
+    
+    .comment .comment-reply {
+        clear: both;
+        margin-bottom: -7px;
+    }
+
+    .comment #reply-title {
+        font-weight: bold;
+        margin: 5px auto 12px 10px;
+    }
+
+    #respond #commentform p {
+        margin-top: 10px;
+    }
+    
+    #respond #commentform textarea {
+        width: 99%;
+    }
+    
+    #respond .comment-notes {
+        font-size: 14px;
+    }
+    
+    .comment ul, .comment ol {
+        margin-left: 25px;
+    }
+
+    .comment .depth-2, .comment .depth-3, .comment .depth-4, .comment .depth-5 {
+        margin-left: -20px;
+        margin-right: -8px;
+    }
+
+    .comment .depth-3 {
+        margin-right: -8px;
+    }
+
+    .comment .depth-4 {
+        margin-right: -8px;
+    }
+
+    .comment .depth-5 {
+        margin-right: -10px;
+    }
+    
+    .comment p {
+        line-height: 1.2em;
+        margin: 1em 0em 1em 0em;
+    }
+
+    .comment blockquote {
+        overflow: auto;
+    }
+
+    .commentlist .heading {
+        font-style: italic;
+    }
+
+        .commentlist li.track, .commentlist li.ping {
+            margin-left: 5px;
+        }
+
+/***** Sidebar Styling *****/
+
+#sidebar {
+    float: right;
+    width: 260px;
+    padding: 0px 20px 0px 20px;
+}
+
+#sidebar div {
+    margin-bottom: 30px;
+}
+
+    #sidebar div:first-child {
+        margin-top: 10px;
+    }
+
+#sidebar .widget-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    text-align: center;
+    text-shadow: -1px -1px 0px #ddd;
+    border: solid 1px #ddd;
+	background-color: #eaeaea;
+    padding: 2px 0px 2px 0px;
+	color: #222;
+}
+
+#sidebar ul {
+	margin: auto;
+	width: 256px;
+}
+
+#sidebar ul li {
+    margin: 3px auto 3px auto;
+    list-style-type: none;
+}
+
+    #sidebar ul ul {
+        margin-left: 25px;
+    }
+    
+    #sidebar ul li .page_item, #sidebar ul li .cat-item {
+        margin-bottom: -2px;
+    }
+
+#sidebar #searchform {
+	text-align: center;
+}
+	
+	#sidebar #searchform #s {
+		width: 185px;
+		margin: 10px auto;
+		height: 22px;
+	}
+
+    #sidebar #searchform #searchsubmit {
+        border: solid 1px #aaa;
+        height: 28px;
+		margin-top: -5px;
+        background: #ededed;
+    }
+	
+	#sidebar #searchform #searchsubmit:hover {
+		background: #ddd;
+	}
+
+#sidebar #calendar_wrap table {
+    width: 240px;
+    text-align: center;
+    margin-left: 10px;
+    border: solid 1px #BBB;
+}
+
+    #calendar_wrap table caption {
+        margin-bottom: 10px;
+    }
+
+    #calendar_wrap table thead tr th {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-bottom: solid 1px #AAA;
+        font-weight: bold;
+    }
+
+    #calendar_wrap table tr {
+        border-bottom: solid 1px #CCC;
+    }
+
+    #calendar_wrap table tr td {
+        padding-top: 2px;
+        padding-bottom: 2px;
+        border-right: solid 1px #CCC;
+        border-left: solid 1px #CCC;
+    }
+
+    #calendar_wrap table tr td#today {
+        background: #CCC;
+        border: solid 1px #AAA;
+    }
+
+    #calendar_wrap table tfoot tr td#prev a, #calendar_wrap table tfoot tr td#next a {
+        text-decoration: none;
+    }
+
+#sidebar .tagcloud {
+    text-align: center;
+}
+
+    .tagcloud a {
+        margin: 3px;
+    }
+
+#sidebar li a.rsswidget {
+    line-height: 20px;
+	float: left;
+}
+
+#sidebar ul li span.rss-date {
+	float: left;
+	margin-bottom: 5px;
+}
+
+#sidebar ul li div.rssSummary {
+    margin-bottom: 0px;
+	clear: left;
+}
+
+#sidebar select {
+    margin: auto;
+    width: 85%;
+    margin-left: 20px;
+}
+
+#sidebar .no-widgets {
+    margin-top: 10px;
+    background: #F7F6A6;
+    padding: 5px;
+    border: solid 1px #DDD;
+    border-radius: 2px;
+    line-height: 1.2em;
+}
+    
+
+/***** End Sidebar Styling *****/
+
+/***** Footer Styling *****/
+
+#footer {
+    clear: both;
+    padding-bottom: 15px;
+    font-size: 14px;
+}
+
+#footer .copyright {
+    float: left;
+}
+
+#footer .themelink {
+    float: right;
+}
+
+/***** End Footer Styling *****/
+
+/***** IE 8 Styling *****/
+
+#ie8 #searchform #searchsubmit {
+    margin-bottom: -16px;
+}	
